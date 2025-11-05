@@ -6,8 +6,8 @@ pi = np.pi
 # PARAMETERS
 TIME_VECTOR_SIZE = 30
 A_tx = 1
-A_int = 0.5
-A_int_phi = pi / 4
+A_int = 2
+A_int_phi = pi / 2 + pi / 4
 
 # CALCULATION
 t = np.linspace(0, 2 * pi, TIME_VECTOR_SIZE, endpoint=False)
@@ -22,7 +22,7 @@ Rx = Tx + Interfer
 # demodulation
 Rx_mul_Sin = Rx * np.sin(t)
 Rx_dot_Sin = np.sum(Rx_mul_Sin)  # Use Rx_mul_Sin please
-A_rx = Rx_dot_Sin* 2 / TIME_VECTOR_SIZE
+A_rx = Rx_dot_Sin * 2 / TIME_VECTOR_SIZE
 
 # PRESENTATION
 plt.plot(t, Tx, "-", label="Tx", color="green")
@@ -58,6 +58,4 @@ print(f"A_rx={A_rx:0.1f}")
 
 # periods = np.reshape(,[30,-1])
 
-
 # dots.append(np.dot(sin,sin_shift))
-
