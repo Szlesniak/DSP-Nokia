@@ -20,5 +20,6 @@ RxPeriods = np.reshape(Rx,(PERIOD_NUMBER,PERIOD_VECTOR_SIZE))
 for i, RxPeriod in enumerate(RxPeriods):
     plt.plot(RxPeriod)
     plt.title(f'period:{i}')
+    plt.ylim(-2,2)
     plt.grid()
     plt.show()

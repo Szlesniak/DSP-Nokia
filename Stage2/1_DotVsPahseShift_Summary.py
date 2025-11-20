@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-shift = np.arange(0, np.pi, np.pi / 16)
+shift = np.linspace(0, np.pi,16)
 t = np.linspace(0, 2 * np.pi, 30, endpoint=False)
 dots = []
 
