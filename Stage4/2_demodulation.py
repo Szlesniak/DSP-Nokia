@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 pi = np.pi
 
@@ -32,10 +32,10 @@ for RxPeriod in RxPeriods:  # iterating periods
     ampl1 = np.dot(RxPeriod, ref1) * 2 / PERIOD_VECTOR_SIZE
     amplitudes_cos.append(ampl1)
 
+plt.show(block=False)
 # presentation
 amplitudes_sin = np.array(amplitudes_sin)  # convert list to numpy 1D array
 amplitudes_cos = np.array(amplitudes_cos)  # ...
 np.set_printoptions(precision=2)  # set numpy array print precision
 print(f"amplitudes_sin = {amplitudes_sin}")
 print(f"amplitudes_cos = {amplitudes_cos}")
-plt.show()
