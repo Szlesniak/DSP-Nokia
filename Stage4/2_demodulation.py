@@ -12,7 +12,6 @@ Rx = np.load("TxSignal_exerc.npy")
 # .. ploting it
 plt.plot(Rx)
 plt.grid()
-plt.show()
 
 # spliting vector into time slots coresponding to single periods
 # "-1" causes automatic evaluation array seccond dimension
@@ -39,3 +38,4 @@ amplitudes_cos = np.array(amplitudes_cos)  # ...
 np.set_printoptions(precision=2)  # set numpy array print precision
 print(f"amplitudes_sin = {amplitudes_sin}")
 print(f"amplitudes_cos = {amplitudes_cos}")
+plt.show()
