@@ -27,7 +27,6 @@ for amp in AMPL_VECTOR:
     dot = np.dot(Ref, Rx)
     ampl = float(2 / TIME_VECTOR_SIZE * dot)
     ampls.append(ampl)
-    errors.append(ampl - amp)
 
     # PRESENTATION
     #   Tx plot
@@ -36,5 +35,7 @@ for amp in AMPL_VECTOR:
     plt.grid(axis="y")
     plt.show()
 
+ampls = np.array(ampls)
+errors = AMPL_VECTOR - ampls
 print(f"received amplitudes: {ampls}")
 print(f"errors: {errors}")

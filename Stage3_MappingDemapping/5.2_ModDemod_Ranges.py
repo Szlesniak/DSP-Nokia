@@ -32,7 +32,7 @@ for i in range(TRANSMISION_NR):
     ampls.append(ampl)
 
 # PRESENTATION
-
+ampls = np.array(ampls)
 plt.plot(ampls, ".", markersize=12)
 plt.axhline(y=0, color="black")
 plt.grid(axis="y")
