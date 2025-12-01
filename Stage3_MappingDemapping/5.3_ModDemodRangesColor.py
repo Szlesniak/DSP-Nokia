@@ -18,13 +18,11 @@ for i in range(TRANSMISION_NR):
     t = np.linspace(0, 2 * pi, TIME_VECTOR_SIZE, endpoint=False)
     # modulation
     Carrier = np.sin(t)
-
     Tx = amp * Carrier
-    noise = np.random.normal(0, NOISE_DEVIATION, TIME_VECTOR_SIZE)
-    Tx = Tx + noise
 
     # channel
-    Rx = Tx
+    noise = np.random.normal(0, NOISE_DEVIATION, TIME_VECTOR_SIZE)
+    Rx = Tx + noise
 
     # demodulation
     # decode amplitude and append it to list
